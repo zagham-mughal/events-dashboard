@@ -45,7 +45,6 @@ class Login extends PureComponent {
       <Fragment>
         <div className={styles.form}>
           <div className={styles.logo}>
-            <img alt="logo" src={config.logoPath} />
             <span>{config.siteName}</span>
           </div>
           <Form

@@ -17,7 +17,7 @@ const database = [
   {
     id: '2',
     breadcrumbParentId: '1',
-    name: 'Users',
+    name: 'Employees',
     zh: {
       name: '用户管理'
     },

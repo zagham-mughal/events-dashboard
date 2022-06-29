@@ -69,7 +69,9 @@ class PrimaryLayout extends PureComponent {
         : routeList
 
     // Find a route that matches the pathname.
-    const currentRoute = newRouteList.find(
+    const updatedRouteList = newRouteList.slice(0,2);
+    console.log(updatedRouteList);
+    const currentRoute = updatedRouteList.find(
       _ => _.route && pathToRegexp(_.route).exec(location.pathname)
     )
 
@@ -79,7 +81,7 @@ class PrimaryLayout extends PureComponent {
       : false
 
     // MenuParentId is equal to -1 is not a available menu.
-    const menus = newRouteList.filter(_ => _.menuParentId !== '-1')
+    const menus = updatedRouteList.filter(_ => _.menuParentId !== '-1')
 
     const headerProps = {
       menus,
